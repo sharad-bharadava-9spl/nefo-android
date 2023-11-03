@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_D9DAD6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.PaymentActivity">
+    <include
+        android:id="@+id/app_layout"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCreditDebit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        card_view:cardCornerRadius="@dimen/card_album_radius"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/llCategoryImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/category_item_bg"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/image_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_credit_card"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/text_categoryname"
+                android:layout_toEndOf="@+id/llCategoryImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="@color/black"
+                android:text="@string/pay_with_credit_debit_card"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textSize="@dimen/category_textsize"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imgUp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_next_new"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:id="@+id/imgDown"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_next_new"
+                android:rotation="90"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btnPayNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/credit_bg"
+        android:text="@string/pay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewGooglePay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        card_view:cardCornerRadius="@dimen/card_album_radius"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/llCategoryImageGoogle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/category_item_bg"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/image_category_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_google_pay"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/text_categoryname_google"
+                android:layout_toEndOf="@+id/llCategoryImageGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="@color/black"
+                android:text="@string/pay_with_google"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textSize="@dimen/category_textsize"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imgNextGoogle"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_next_new"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <include
+        android:id="@+id/btn_buy_pwg"
+        android:visibility="gone"
+        layout="@layout/pay_with_google_button"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_below="@+id/rlGooglePay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+</LinearLayout>

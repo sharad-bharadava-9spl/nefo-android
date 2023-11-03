@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_161D26"
+    android:id="@+id/sendRequest"
+    android:orientation="vertical"
+    tools:context=".fragment.Chat.SendFriendRequestFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutFriendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/not_found_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_friend_requests"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/karla_regular" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ivFriendRequestSendRecycler"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/send_request_item_layout"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:itemCount="2"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

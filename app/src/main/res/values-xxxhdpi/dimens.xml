@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_width">@dimen/_250sdp</dimen>
+    <dimen name="logo_height">@dimen/_85sdp</dimen>
+    <dimen name="login_logo_margin">@dimen/_40sdp</dimen>
+    <dimen name="login_screen_margin">@dimen/_3sdp</dimen>
+
+    <dimen name="actionbar_icon_size">@dimen/_20sdp</dimen>
+    <dimen name="add_button_size">@dimen/_20sdp</dimen>
+    <dimen name="homescreen_category_textsize">@dimen/_8sdp</dimen>
+    <dimen name="home_categoryimage_size">50dp</dimen>
+    <dimen name="car_counttext_size">@dimen/_8sdp</dimen>
+    <dimen name="language_text_padding">@dimen/_10sdp</dimen>
+    <dimen name="main_acc_image_size">@dimen/_50sdp</dimen>
+    <dimen name="normal_acc_size">@dimen/_40sdp</dimen>
+    <dimen name="enter_password_size">20sp</dimen>
+    <dimen name="button_textsize">16sp</dimen>
+</resources>

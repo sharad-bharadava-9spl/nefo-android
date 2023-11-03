@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <uses-permission
+        android:name="android.permission.LOCAL_MAC_ADDRESS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".application.GlobalApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".fragment.Chat.ChatDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Chat.RequestDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Chat.NotificationChatDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Chat.NotificationClubChatDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Chat.ClubChatDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.DisplayQRCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.PreRegisterDocumentUploadActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.PreRegisterPersonalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.OrderSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.SignatureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAZIMKUvHi6s2vKrvtvOnBf-Rbz9qREOe4" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.PreRegisterSignAndAcceptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.PreRegisterChooseDateAndTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.CartActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.nefos.ccsmembersapp.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.LoginAcvitiy"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.AddSelectClubActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.AddNewClubActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:exported="false"
+            android:name="com.nefos.ccsmembersapp.activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name="com.nefos.ccsmembersapp.service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.nefos.ccsmembersapp.service.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.nefos.ccsmembersapp.MyNotificationListenerService"
+            android:exported="true"
+            android:label="Notification Listener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.KillService"
+            android:enabled="true"
+            android:stopWithTask="false">
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.nefos.ccsmembersapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

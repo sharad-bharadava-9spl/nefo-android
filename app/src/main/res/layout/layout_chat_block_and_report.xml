@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/block_report_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etReason"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:hint="@string/reason"
+        android:layout_gravity="start"
+        android:fontFamily="@font/karla_medium"
+        android:textStyle="normal"
+        android:gravity="start"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/block_report_edit_text_border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBlockAndReport"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:fontFamily="@font/karla_medium"
+            android:textStyle="normal"
+            android:text="@string/block_report"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textColor="@color/btn_text_color"
+            android:textSize="14sp"
+            app:backgroundTint="@color/btn_color" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/karla_medium"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="normal"
+            android:textColor="@color/btn_text_color"
+            android:textSize="14sp"
+            app:backgroundTint="@color/btn_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvChatList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list_border"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8sdp"
+    android:layout_margin="@dimen/_6sdp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFriendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:fontFamily="@font/karla_medium"
+            android:layout_gravity="start"
+            tools:text="@string/_username_"
+            android:textStyle="normal"
+            android:textColor="#EBEDEF"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvAwaitingResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:gravity="top"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/awaiting_response"
+            android:textColor="@color/_A0A2A7"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivConfirmRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_add_request_bg"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_chat_confrim_right_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivAddRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_add_request_bg"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/chat_request_plus_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/ivCancelRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_cancel_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_cancel_wrong_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivChatRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_chat_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_small_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/ivDeleteRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_chat_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_delet_request_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:id="@+id/group_menu_list">
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/menu_categories"
+            android:icon="@drawable/btn_bg"
+            android:title="@string/categories" />
+        <item
+            android:id="@+id/menu_wallet"
+            android:icon="@drawable/ic_wallet_new"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/menu_chat"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/chat" />
+        <item
+            android:id="@+id/menu_orderhistory"
+            android:icon="@drawable/ic_dispense_history"
+            android:title="@string/order_history" />
+        <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_myprofile"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/menu_notification"
+            android:icon="@drawable/ic_notification_new_1"
+            android:title="@string/notification" />
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/ic_logout_new"
+            android:title="@string/logout" />
+    </group>
+    <group
+        android:id="@+id/group_account_list"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_add_account"
+            android:icon="@drawable/add"
+            android:title="Add Account" />
+
+    </group>
+</menu>

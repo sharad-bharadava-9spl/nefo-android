@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.Chat.ChatDetailsActivity">
+
+    <item
+        android:id="@+id/itemBlock"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="@string/block"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemReport"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="@string/block_report"
+        app:showAsAction="never" />
+</menu>

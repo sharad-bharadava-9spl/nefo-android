@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="currency_sign">€</string>
+    <string name="alpha_numeric_regx">[a-zA-Z0-9]+</string>
+</resources>

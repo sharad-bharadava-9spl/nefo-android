@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list_border"
+    android:padding="@dimen/_8sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/ic_myprofile"
+        android:layout_gravity="center"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:layout_marginStart="@dimen/_10sdp"
+       android:layout_marginEnd="@dimen/_12sdp"
+       android:layout_gravity="center"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/tvName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/karla_medium"
+           tools:text="new name"
+           android:textColor="#EBEDEF"
+           android:textSize="16sp"
+           android:textStyle="normal" />
+
+       <TextView
+           android:id="@+id/tvLastMessage"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           tools:text="this message is from my self"
+           android:layout_marginTop="6dp"
+           android:textColor="#A0A2A7"
+           android:fontFamily="@font/karla_regular"
+           android:maxLines="1"
+           android:textSize="14sp"
+           android:textStyle="normal"
+           android:ellipsize="end" />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/karla_regular"
+            android:layout_gravity="end"
+            android:textSize="12sp"
+            tools:text="+12"
+            android:textStyle="normal"
+            android:textFontWeight="700"
+            android:background="@drawable/chatcount_background" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10:00 am"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/karla_regular"
+            android:textStyle="normal"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

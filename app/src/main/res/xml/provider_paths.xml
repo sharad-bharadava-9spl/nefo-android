@@ -1,0 +1,20 @@
+<paths>
+    <!-- Access to app's internal files -->
+    <internal-path name="internal_files" path="." />
+
+    <!-- Access to app's external files -->
+    <external-path name="external_files" path="." />
+
+    <!-- Access to app's cache directory -->
+    <cache-path name="cache_files" path="." />
+
+    <!-- Access to app's external cache directory -->
+    <external-cache-path name="external_cache_files" path="." />
+
+    <!-- Access to app's media directory -->
+    <external-path name="external_media_files" path="." />
+
+    <!-- Access to app's downloads directory -->
+    <external-path name="external_downloads_files" path="." />
+
+</paths>

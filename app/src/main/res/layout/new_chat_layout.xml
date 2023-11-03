@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list_border"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8sdp"
+    android:layout_margin="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tvNewChatFriendName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:fontFamily="@font/karla_medium"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        tools:text="_@Username"
+        android:textColor="@color/_EBEDEF"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/ivNewChatRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_chat_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_small_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="visible" />
+
+</LinearLayout>

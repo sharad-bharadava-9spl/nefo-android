@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_EDEEF0">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetRight="0dp"
+        android:padding="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/category_rv_elevation"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="@color/color_4F7E3A"
+            android:textSize="@dimen/title_textsize"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/cart_rl"
+            android:layout_width="@dimen/actionbar_icon_size"
+            android:layout_height="@dimen/actionbar_icon_size"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/image_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_view_cart"
+                android:visibility="visible"
+                app:tint="@color/color_4F7E3A" />
+
+
+            <RelativeLayout
+                android:id="@+id/cart_count_rl"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/cart_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/cart_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/car_counttext_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/image_notification"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_notification_new_1"
+            android:visibility="visible" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/llOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="@color/black"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_order_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="@color/black"
+            android:gravity="right" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewDispenseDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llOrder"
+        android:paddingBottom="@dimen/_50sdp"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/btnCancelOrder"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/recycleViewDispenseDetail"
+        android:text="@string/cancel_order"
+        android:background="@drawable/cancel_order_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

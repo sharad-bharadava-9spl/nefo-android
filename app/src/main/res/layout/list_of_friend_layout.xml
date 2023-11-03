@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_6sdp"
+    android:background="@drawable/chat_list_border"
+    android:padding="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/FriendName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:fontFamily="@font/karla_medium"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        tools:text="_@Username"
+        android:textColor="#EBEDEF"
+        android:textStyle="normal"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/ivChatRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/chat_chat_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_small_icon"
+        android:textColor="@color/_CC000000" />
+
+    <ImageView
+        android:id="@+id/ivDeleteRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_chat_request_bg"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/chat_delet_request_icon"
+        android:textColor="@color/_CC000000"
+        android:visibility="visible" />
+
+</LinearLayout>

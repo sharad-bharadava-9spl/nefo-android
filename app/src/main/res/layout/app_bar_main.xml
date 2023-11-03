@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nefos.ccsmembersapp.BuildConfig" />
+
+        <import type="com.nefos.ccsmembersapp.Util.Utils" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:theme="@style/Theme.MyFancyTheme"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                app:contentInsetRight="0dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <ImageView
+                    android:id="@+id/imgDrawer"
+                    android:layout_width="30dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/ic_menu_drawer" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_70sdp"
+                    android:layout_marginRight="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_16" />
+
+                <RelativeLayout
+                    android:id="@+id/cart_rl"
+                    android:layout_width="@dimen/actionbar_icon_size"
+                    android:layout_height="@dimen/actionbar_icon_size"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="10dp"
+                    android:visibility="@{BuildConfig.FLAVOR.equalsIgnoreCase(Utils.NO_PAYMENT) ? View.GONE : View.VISIBLE, default=gone}">
+
+                    <ImageView
+                        android:id="@+id/image_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_toolbar_cart"
+                        android:visibility="visible" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/cart_count_rl"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/cart_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/cart_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/car_counttext_size"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/notification_rl_main"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_notification"
+                        android:layout_width="30dp"
+                        android:layout_height="23dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_notification"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/notification_count_rl"
+                        android:layout_width="30dp"
+                        android:layout_height="21dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/notification_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/notification_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_ovel_orange"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_13" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivQrCode"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_scan_qr_code"
+                    app:tint="@color/white"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlChatCount"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivChatToolbar"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_chat_toolbar"
+                        app:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlShowCount"
+                        android:layout_width="30dp"
+                        android:layout_height="21dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvChatCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_chat_count_border"
+                            android:fontFamily="@font/karla_regular"
+                            android:textFontWeight="700"
+                            android:gravity="center"
+                            tools:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/productsans_regular"
+                    android:text="@string/save"
+                    android:textColor="@color/color_4F7E3A"
+                    android:textSize="@dimen/title_textsize"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--<include layout="@layout/content_main" />-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

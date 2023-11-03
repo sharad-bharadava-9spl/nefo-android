@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme"
+    >
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans_regular"
+        android:text="@string/your_new_password_must_be_"
+        android:textColor="@color/black"
+        android:textSize="@dimen/enter_password_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans_regular"
+        android:gravity="center"
+        android:text="@string/enter_your_new_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/enter_password_size"
+        android:layout_marginTop="@dimen/_30sdp"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        style="@style/main_edittext_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans_regular"
+        android:inputType="textPassword"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/productsans_regular"
+        android:text="@string/enter_your_new_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/enter_password_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/productsans_regular"
+        android:gravity="center"
+        android:text="@string/repeat_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/enter_password_size" />
+
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        style="@style/main_edittext_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans_regular"
+        android:inputType="textPassword"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/productsans_regular"
+        android:text="@string/repeat_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/enter_password_size" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/btn_color"
+        android:fontFamily="@font/productsans_regular"
+        android:text="@string/change_password"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_textsize" />-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+</LinearLayout>
+</layout>

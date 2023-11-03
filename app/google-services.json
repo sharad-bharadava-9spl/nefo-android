@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "518025578093",
+    "firebase_url": "https://cannabis-club-system.firebaseio.com",
+    "project_id": "cannabis-club-system",
+    "storage_bucket": "cannabis-club-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518025578093:android:f61ca122979794ef",
+        "android_client_info": {
+          "package_name": "com.app.cannabis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518025578093-0ca7bbo1k6jbrmh1o83bq6f20rs1r1fj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZIMKUvHi6s2vKrvtvOnBf-Rbz9qREOe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518025578093-0ca7bbo1k6jbrmh1o83bq6f20rs1r1fj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "518025578093-00ld57c185b1a70uai2lqe1kigs3gphs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nefos.ccsmembersapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518025578093:android:e35622844f030a883a2164",
+        "android_client_info": {
+          "package_name": "com.nefos.ccsmembersapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518025578093-0ca7bbo1k6jbrmh1o83bq6f20rs1r1fj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZIMKUvHi6s2vKrvtvOnBf-Rbz9qREOe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518025578093-0ca7bbo1k6jbrmh1o83bq6f20rs1r1fj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "518025578093-00ld57c185b1a70uai2lqe1kigs3gphs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nefos.ccsmembersapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

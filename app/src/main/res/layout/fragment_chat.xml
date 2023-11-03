@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_161D26"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/mainL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+           <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#0EFF86"
+                app:strokeWidth="0dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/box"
+                   android:layout_gravity="center"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:id="@+id/tvFriends"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:text="@string/friends"
+                       android:textColor="@color/_161D26"
+                       android:fontFamily="@font/karla_regular"
+                       android:textFontWeight="700"
+                       android:textSize="16sp" />
+
+                   <TextView
+                       android:id="@+id/tvClubChat"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:fontFamily="@font/karla_regular"
+                       android:textFontWeight="700"
+                       android:gravity="center"
+                       android:text="@string/clubs_chat"
+                       android:textColor="@color/_161D26"
+                       android:textSize="16sp" />
+
+                   <TextView
+                       android:id="@+id/tvFriendsChat"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:fontFamily="@font/karla_regular"
+                       android:textFontWeight="700"
+                       android:gravity="center"
+                       android:text="@string/friends_chat"
+                       android:textColor="@color/_161D26"
+                       android:textSize="16sp" />
+
+               </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <FrameLayout
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

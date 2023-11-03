@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp"
+    android:orientation="vertical"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        tools:text="28 JUL 2023" />
+
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="@drawable/bg_chat_user_msg">
+
+        <TextView
+            android:id="@+id/tvSenderMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            tools:text="Message Here" />
+
+        <TextView
+            android:id="@+id/tvSenderMsgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:textSize="@dimen/_10sdp"
+            tools:text="10 am" />
+
+    </LinearLayout>
+
+</LinearLayout>

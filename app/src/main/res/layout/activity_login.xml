@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_estrellas"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            tools:context=".activity.LoginAcvitiy">
+
+            <LinearLayout
+                android:id="@+id/llLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_42sdp">
+
+                <ImageView
+                    android:id="@+id/ivback"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:rotation="180"
+                    android:visibility="gone"
+                    app:tint="@color/color_4F7E3A" />
+
+                <ImageView
+                    android:layout_width="@dimen/_68sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_app_icon" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/llLogo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/parentView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_29sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_222sdp"
+                            android:layout_height="@dimen/box"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/text_english"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:tag="en"
+                                android:text="@string/english"
+                                android:textColor="@color/_161D26"
+                                android:textSize="@dimen/txt_16" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/_061914"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/text_spanish"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:tag="es"
+                                android:text="@string/spanish"
+                                android:textColor="@color/_161D26"
+                                android:textSize="@dimen/txt_16" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_37sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/email"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_16" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/box"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="@drawable/bg_edt"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_11sdp"
+                                android:src="@drawable/ic_email" />
+
+                            <EditText
+                                android:id="@+id/edtEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_36sdp"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:background="@null"
+                                android:fontFamily="@font/roboto_regular"
+                                android:hint="@string/email_hint"
+                                android:inputType="textEmailAddress"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/_37404B"
+                                android:textSize="@dimen/txt_16" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvErrorEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""
+                            android:textColor="@color/_EBEDEF"
+                            android:textSize="@dimen/txt_13" />
+
+                        <TextView
+                            android:id="@+id/textPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/password"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_16" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/box"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="@drawable/bg_edt"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_9sdp"
+                                android:src="@drawable/ic_password" />
+
+                            <EditText
+                                android:id="@+id/edtPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_36sdp"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:background="@null"
+                                android:fontFamily="@font/roboto_regular"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/_37404B"
+                                android:textSize="@dimen/txt_16" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvErrorPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""
+                            android:textColor="@color/_EBEDEF"
+                            android:textSize="@dimen/txt_13" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_login"
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/login"
+                            android:textAllCaps="false"
+                            android:textColor="@color/btn_text_color"
+                            android:textSize="@dimen/button_textsize"
+                            app:backgroundTint="@color/btn_color"
+                            app:cornerRadius="@dimen/_8sdp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_27sdp">
+
+                            <LinearLayout
+                                android:id="@+id/llRemember"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:onClick="onClick">
+
+                                <ImageView
+                                    android:id="@+id/ivRemember"
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@color/_28E487"
+                                    android:src="@drawable/ic_check_disable" />
+
+                                <TextView
+                                    android:id="@+id/textRememberMe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/remember_me"
+                                    android:textColor="@color/_EBEDEF"
+                                    android:textSize="@dimen/txt_14" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvForgotPassword"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/llRemember"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="end"
+                                android:onClick="onClick"
+                                android:text="@string/forgot_password"
+                                android:textColor="@color/_FECE53"
+                                android:textSize="@dimen/txt_16" />
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/textNotMemberYet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_toStartOf="@+id/tvRegister"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:text="@string/not_a_member_yet"
+                            android:textColor="@color/_EBEDEF"
+                            android:textSize="@dimen/txt_18" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/tvRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="@string/register_here"
+                            android:textAllCaps="false"
+                            android:textColor="@color/btn_text_color"
+                            android:textSize="@dimen/txt_16"
+                            app:backgroundTint="@color/_FECE53"
+                            app:cornerRadius="@dimen/_8sdp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRegisterSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_CC000000"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:background="@drawable/background_green">
+
+                <TextView
+                    android:id="@+id/textMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/registered_successfully_"
+                    android:textColor="@color/_14AA5F"
+                    android:textSize="@dimen/txt_16" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

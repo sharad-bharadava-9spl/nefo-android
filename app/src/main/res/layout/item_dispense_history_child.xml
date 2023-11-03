@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.nefos.ccsmembersapp.model.OrderDetails" />
+
+        <variable
+            name="itemClickListener"
+            type="com.nefos.ccsmembersapp.interfaces.OnItemClickListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{((position + 1) % 2 == 0) ? @color/_212A36 : @color/_161D26}"
+        android:onClick="@{(view) -> itemClickListener.onItemClick(view, item)}"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_7sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/llEnd"
+            android:fontFamily="@font/karla_regular"
+            android:text="@{item.product_name}"
+            android:textColor="@color/_EBEDEF"
+            android:textSize="@dimen/txt_14" />
+
+        <LinearLayout
+            android:id="@+id/llEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/lblListItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karla_medium"
+                android:text="@{item.quantity}"
+                android:textColor="@color/_EBEDEF"
+                android:textSize="@dimen/txt_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/karla_medium"
+                android:text="@{item.amount}"
+                android:textColor="@color/_EBEDEF"
+                android:textSize="@dimen/txt_14" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

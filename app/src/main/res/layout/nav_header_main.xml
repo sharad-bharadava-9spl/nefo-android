@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:background="@color/_F8F9FA"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:id="@+id/image_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/main_account"
+            android:layout_width="@dimen/main_acc_image_size"
+            android:layout_height="@dimen/main_acc_image_size"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_myprofile" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/account_second"
+            android:layout_width="@dimen/normal_acc_size"
+            android:layout_height="@dimen/normal_acc_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/account_first"
+            android:src="@drawable/ic_myprofile" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/account_first"
+            android:layout_width="@dimen/normal_acc_size"
+            android:layout_height="@dimen/normal_acc_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_myprofile" />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/image_rl"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#b7b7b7" />
+
+    <LinearLayout
+        android:id="@+id/ll_switch_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_rl"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_below="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/switch_account"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:rotation="90"
+                android:src="@drawable/ic_next_new"
+                app:tint="@color/color_4F7E3A" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

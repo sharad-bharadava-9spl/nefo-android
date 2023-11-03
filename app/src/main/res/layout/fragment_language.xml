@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rel"
+    android:layout_height="match_parent"
+    android:background="@drawable/choose_lang_bg"
+    tools:context=".fragment.LanguageFragment">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:fontFamily="@font/productsans_regular"
+        android:text="@string/choose_your_language"
+        android:textColor="@color/_EBEDEF"
+        android:textSize="@dimen/_18sdp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLabel"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/lang_spinner_bg" />
+
+    <!--<RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLabel"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rbEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/radio_button_selector"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/english"
+            android:textSize="@dimen/_18sdp" />
+
+        <RadioButton
+            android:id="@+id/rbSpanish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:checked="false"
+            android:drawableRight="@drawable/radio_button_selector"
+            android:drawablePadding="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/spanish"
+            android:textSize="@dimen/_18sdp" />
+    </RadioGroup>-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChoose"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/choose_language"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_text_color"
+        android:textSize="@dimen/button_textsize"
+        app:backgroundTint="@color/btn_color"
+        app:cornerRadius="@dimen/_5sdp" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cartbg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/productsans_bold"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+    </LinearLayout>-->
+</RelativeLayout>

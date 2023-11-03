@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/club"
+    android:background="@color/_161D26"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.Chat.ClubChatListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        tools:itemCount="2"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:listitem="@layout/layout_club_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_chat_available"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat_semibold"/>
+
+</LinearLayout>

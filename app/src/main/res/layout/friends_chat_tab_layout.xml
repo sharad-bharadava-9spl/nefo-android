@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list_border"
+    android:padding="@dimen/_12sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla_medium"
+            tools:text="new name"
+            android:textColor="#EBEDEF"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvDescMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            tools:text="this message is from my self"
+            android:fontFamily="@font/karla_regular"
+            android:textFontWeight="400"
+            android:textColor="#A0A2A7"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/tvCountMsg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingStart="@dimen/_5sdp"
+           android:paddingEnd="@dimen/_5sdp"
+           android:textStyle="normal"
+           android:fontFamily="@font/karla_regular"
+           android:textFontWeight="700"
+           android:textColor="#000000"
+           tools:text="+12"
+           android:layout_gravity="end"
+           android:gravity="center"
+           android:background="@drawable/chatcount_background" />
+
+       <TextView
+           android:id="@+id/msgtime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           tools:text="10:00 am"
+           android:textColor="@color/_F8F9FA"
+           android:fontFamily="@font/karla_regular"
+           android:textStyle="normal"
+           android:textFontWeight="400"
+           android:layout_marginTop="6dp"
+           android:textSize="14sp"/>
+
+   </LinearLayout>
+
+
+</LinearLayout>

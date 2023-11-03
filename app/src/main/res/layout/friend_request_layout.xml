@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/receiveRequestLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list_border"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8sdp"
+    android:layout_margin="@dimen/_6sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#37404B">
+
+        <TextView
+            android:id="@+id/tvFriendName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:fontFamily="@font/karla_medium"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            tools:text="_@Username"
+            android:textColor="#EBEDEF"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivConfirmRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:background="@drawable/chat_add_request_bg"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_chat_confrim_right_icon"
+            android:textColor="@color/_CC000000"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivCancelRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_cancel_request_bg"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/chat_cancel_wrong_icon"
+            android:textColor="@color/_CC000000"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

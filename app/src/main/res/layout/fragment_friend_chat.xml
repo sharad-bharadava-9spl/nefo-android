@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_container"
+    android:background="@color/_161D26"
+    tools:context=".fragment.Chat.FriendChatFragment">
+
+    <LinearLayout
+        android:id="@+id/llFriendChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llAddFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/category_item_selected_round"
+                    android:padding="22dp"
+                    android:src="@drawable/ic_add_friend_chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/add_friends"
+                    android:fontFamily="@font/karla_regular"
+                    android:textFontWeight="700"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:textColor="#EBEDEF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLinearFriendRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivFriendRequest"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:background="@drawable/category_item_selected_round"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_chat_request" />
+
+                    <TextView
+                        android:id="@+id/ivFriendRequestCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/ivFriendRequest"
+                        android:layout_alignEnd="@+id/ivFriendRequest"
+                        android:background="@drawable/ic_count_friend_request"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        tools:text="5"
+                        android:visibility="gone"
+                        android:textColor="@color/_F8F9FA"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/friend_request"
+                    android:fontFamily="@font/karla_regular"
+                    android:textFontWeight="700"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="#EBEDEF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_friend_chat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/_757E89" />
+
+        <TextView
+            android:id="@+id/tvsearchtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="10dp"
+            android:text="@string/search_for_friends_by_username"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/karla_regular"
+            android:textFontWeight="400"
+            android:textStyle="normal"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_search"
+            android:padding="8dp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:searchIcon="@drawable/chat_search_icon">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/chat_search_icon"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/svSearchUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint="@string/search_username"
+                android:imeOptions="actionSearch"
+                android:background="@null"
+                android:textColor="#37404B"
+                android:fontFamily="@font/karla_regular"
+                android:textFontWeight="400"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/_757E89"
+            android:layout_marginTop="@dimen/_20sdp" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayoutFriendChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_friends"
+                    android:textColor="#EBEDEF"
+                    android:fontFamily="@font/karla_medium"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/not_found_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/no_data_available"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/toast_layout_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:elevation="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D2E6FF">
+
+                        <TextView
+                            android:id="@+id/response_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/karla_medium"
+                            android:textColor="#0059C1"
+                            tools:text="Message"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFriendList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/list_of_friend_layout"
+                    tools:itemCount="5" />
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+</FrameLayout>

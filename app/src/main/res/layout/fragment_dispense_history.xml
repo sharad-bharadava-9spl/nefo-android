@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlDispenseHistoryMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_161D26"
+    tools:context=".fragment.DispenseHistoryFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llFilterParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llFilterOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp">
+
+            <FrameLayout
+                android:id="@+id/flHome"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:background="@drawable/nv_unselected_icon_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHome"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_filter" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFilterOptions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center|start"
+                android:background="@drawable/nv_unselected_text_bg"
+                android:fontFamily="@font/karla_medium"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:text="@string/filter_options"
+                android:textColor="@color/_EBEDEF"
+                android:textSize="@dimen/txt_19"
+                app:drawableEndCompat="@drawable/ic_arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/filter_options_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/radioGrpfilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbLastThirtyDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:buttonTint="@color/_33FF99"
+                    android:fontFamily="@font/karla_medium"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="@string/filter_by_last_30_orders"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/_EBEDEF"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RadioButton
+                    android:id="@+id/rbYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:buttonTint="@color/_33FF99"
+                    android:fontFamily="@font/karla_medium"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="@string/filter_by_year"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/_EBEDEF"
+                    android:textSize="@dimen/_15sdp" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/lang_spinner_bg"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/select_year"
+                android:textColor="@color/_161D26"
+                android:textSize="@dimen/txt_20"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFilter"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/filter"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/button_textsize"
+                app:backgroundTint="@color/btn_color"
+                app:cornerRadius="@dimen/_5sdp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--<RelativeLayout
+        android:id="@+id/rlDispenseHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/color_EDEEF0"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/productsans_bold"
+            android:text="@string/order_history"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <ImageView
+            android:id="@+id/ivfilter"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/filter_bg"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/filter"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llFilter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_below="@+id/rlDispenseHistory"
+        android:background="@drawable/bottom_layout_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/filter_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/productsans_regular"
+                android:text="@string/filter_by"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/radioGrpfilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbLastThirtyDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="4dp"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/productsans_regular"
+                    android:layoutDirection="ltr"
+                    android:text="@string/thirty_days"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RadioButton
+                    android:id="@+id/rbMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="4dp"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/productsans_regular"
+                    android:layoutDirection="ltr"
+                    android:text="@string/month"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rbYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="4dp"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/productsans_regular"
+                    android:layoutDirection="ltr"
+                    android:text="@string/year"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDispenseHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llFilterParent"
+        android:layout_marginTop="@dimen/_15sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoDispenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llFilterParent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:gravity="center"
+        android:text="@string/no_dispenses_found"
+        android:textColor="@color/_EBEDEF"
+        android:textSize="@dimen/txt_16"
+        android:visibility="gone" />
+</RelativeLayout>

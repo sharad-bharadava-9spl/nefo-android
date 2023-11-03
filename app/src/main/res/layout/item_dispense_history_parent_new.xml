@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="item"
+            type="com.nefos.ccsmembersapp.model.DispenseHistory" />
+
+        <variable
+            name="itemClickListener"
+            type="com.nefos.ccsmembersapp.interfaces.OnItemClickListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/order_details_bg"
+        android:onClick="@{(view) -> itemClickListener.onItemClick(view, item)}"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:background="@color/_212A36"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/lblListHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/llEnd"
+                android:fontFamily="@font/karla_medium"
+                android:text="@{item.orderDate + ` `+ item.orderTime}"
+                android:textColor="@color/_FECE53"
+                android:textSize="@dimen/txt_13" />
+
+            <LinearLayout
+                android:id="@+id/llEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/total_txt"
+                    android:textColor="@color/_33FF99"
+                    android:textSize="@dimen/txt_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:fontFamily="@font/karla_medium"
+                    android:text="@{item.product_total_amount}"
+                    android:textColor="@color/_33FF99"
+                    android:textSize="@dimen/txt_16" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/_37404B" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            bind:listener="@{itemClickListener}"
+            bind:recyclerViewDispenseHistory="@{item.orderDetails}" />
+
+    </LinearLayout>
+</layout>

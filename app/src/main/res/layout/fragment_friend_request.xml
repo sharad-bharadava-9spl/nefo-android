@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/_161D26"
+    android:id="@+id/llFriendRequest"
+    android:orientation="vertical"
+    tools:context=".fragment.Chat.FriendRequestFragment">
+
+    <FrameLayout
+        android:id="@+id/request_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/white"
+                        android:backgroundTint="@color/transparent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="12dp"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="#EBEDEF"
+                        app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                        app:tabTextColor="#A0A2A7" />
+                    <FrameLayout
+                        android:id="@+id/viewPager2"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include
+        layout="@layout/app_ge_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0" />
+
+</LinearLayout>

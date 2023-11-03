@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_161D26"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_40sdp"
+    tools:context=".fragment.PreRegisterCodeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/_161D26"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/enter_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_16" />
+
+        <RelativeLayout
+            android:id="@+id/rlCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/box"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_edt"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:src="@drawable/ic_username" />
+
+            <EditText
+                android:id="@+id/etCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_36sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/insert_code_here"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_37404B"
+                android:textSize="@dimen/txt_15" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/_EBEDEF"
+            android:textSize="@dimen/txt_13" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/str_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_text_color"
+            android:textSize="@dimen/button_textsize"
+            app:backgroundTint="@color/btn_color"
+            app:cornerRadius="@dimen/_8sdp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
